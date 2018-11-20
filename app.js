@@ -38,8 +38,10 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(passport.initialize());
 app.use(passport.session());
-app.use(bodyParser.urlencoded());
-app.use(session({secret: 'hoge'}));
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(session({secret: 'hoge',
+                resave: true,
+                saveUninitialized: true}));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride(function(req, res){
     if (req.body && typeof req.body === 'object' && '_method' in req.body) {
