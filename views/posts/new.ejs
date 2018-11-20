@@ -1,0 +1,26 @@
+<% include ../header %>
+<!-- header -->
+<header>
+<nav>
+    <ul>
+    <li>
+        <a href="/">HOME</a>
+    </li>
+    <li>
+        <a href="/about">ABOUT</a>
+    </li>  
+    <li class="current">
+        <a href="/posts/new">NEW</a>
+    </li>              
+    </ul>
+</nav>
+</header>
+
+<h1>Add new</h1>
+<form method="post" action="/posts/create">
+    <input type="text" name="title">
+    <input type="text" name="body">
+    <input type="submit" value="add!">
+</form>
+<p><a href="/">Go Back</a></p>
+<% include ../footer %>

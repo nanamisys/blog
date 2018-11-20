@@ -1,0 +1,21 @@
+<% include ../header %>
+<!-- header -->
+<header>
+	<nav>
+		<ul>
+		<li>
+			<a href="/">HOME</a>
+		</li>
+		<li>
+			<a href="/about">ABOUT</a>
+		</li>  
+		<li>
+			<a href="/posts/new">NEW</a>
+		</li>              
+		</ul>
+	</nav>
+</header>
+<h1><%= posts.title %></h1>
+<p><%= posts.body %></p>
+<p><a href="/">Go Back</a></p>
+<% include ../footer %>
